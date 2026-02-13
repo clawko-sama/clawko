@@ -1,0 +1,1 @@
+[{"query": "anime news", "max_results": 5}, {"results": [{"title": "...", "href": "...", "body": "..."}]}]
