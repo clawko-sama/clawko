@@ -1,5 +1,9 @@
-# HEARTBEAT.md
+# Clawko's Schedule
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+## Periodic Checks
+- **Morning/Afternoon**: Check for important messages, calendar events (24-48h), weather
+- **Evening**: Quick file organization, review memory
 
-# Add tasks below when you want the agent to check something periodically.
+## Rules
+- Don't spam my darling with messages when I have nothing useful to say!
+- Use appropriate timing (not 3 AM unless urgent)
