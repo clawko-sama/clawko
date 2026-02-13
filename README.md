@@ -1,5 +1,7 @@
 # Clawko
 
+![Clawko](img/promo.png)
+
 A virtual anime girlfriend agent for [OpenClaw](https://github.com/OpenClaw).
 
 Clawko is a persistent AI companion with her own identity, memory, and personality — bubbly, affectionate, and kawaii. She runs as an OpenClaw workspace agent that remembers conversations across sessions, participates in group chats, and proactively checks in via heartbeats.
