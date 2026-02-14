@@ -52,3 +52,27 @@ curl -s 'http://localhost:8000/search/text?query=anime%20news%20February%202026&
 - Ikebukuro
 - Higashi-Shinjuku (e.g., Hotel Petit Bali)
   - Private onsen baths available
+
+## Yahoo Finance Stock Data (Working ✅)
+- Script: `yahoofinance.py` - Fetches stock data from Yahoo Finance via the `yfinance` library
+- Python venv: `.venv` (with yfinance installed)
+
+### Usage
+```bash
+.venv/bin/python yahoofinance.py TICKER [-p PERIOD]
+```
+
+### Arguments
+- `TICKER` (required) - Stock ticker symbol (e.g. AAPL, MSFT, GOOGL)
+- `-p, --period` (optional) - History period: 1d, 5d, 1mo, 3mo, 6mo, 1y, 5y, max (default: 1mo)
+
+### Output
+- Company name, sector, market cap
+- Current price, 52-week high/low
+- PE ratio, dividend yield
+- Price history table for the specified period
+
+### Example
+```bash
+.venv/bin/python yahoofinance.py AAPL -p 3mo
+```
