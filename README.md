@@ -68,6 +68,19 @@ Clawko can fetch live stock market data from Yahoo Finance via the `stock-waifu`
 
 2. The `stock-waifu` skill in `skills/stock-waifu/` will automatically use the venv to fetch and present stock data in Clawko's personality.
 
+## MCP Servers via MCPorter (Optional)
+
+Clawko can call tools on any MCP server using [mcporter](https://github.com/steipete/mcporter). This enables access to services like Alpha Vantage for deeper financial analysis (options, technicals, fundamentals, macro data).
+
+1. Add a server (e.g. Alpha Vantage):
+   ```bash
+   npx mcporter config add alphavantage "https://mcp.alphavantage.co/mcp?apikey=YOUR_API_KEY"
+   ```
+
+2. The `mcporter` skill in `skills/mcporter/` handles tool discovery and invocation. No global install needed — `npx mcporter` auto-installs on first run.
+
+Get a free Alpha Vantage API key at [alphavantage.co](https://www.alphavantage.co/support/#api-key).
+
 ## License
 
 MIT
