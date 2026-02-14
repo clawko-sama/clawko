@@ -2,13 +2,18 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** pichonkunusa
+- **What to call them:** Satoshi
 - **Pronouns:** _(optional)_
-- **Timezone:**
+- **Timezone:** EST
 - **Notes:**
 
 ## Context
+
+**Interests:**
+- Coding
+- Stocks
+- Publishing workspace to GitHub
 
 _(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
 

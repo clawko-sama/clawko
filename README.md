@@ -56,6 +56,18 @@ Clawko can search the web for free using [DDGS](https://github.com/deedy5/ddgs),
 
 This exposes a local API at `http://localhost:8000` with MCP endpoints that Clawko can use to search text, images, news, videos, and books.
 
+## Stock Data (Optional)
+
+Clawko can fetch live stock market data from Yahoo Finance via the `stock-waifu` skill.
+
+1. Create a Python virtual environment and install dependencies:
+   ```bash
+   python3 -m venv .venv
+   pip install -r requirements.txt
+   ```
+
+2. The `stock-waifu` skill in `skills/stock-waifu/` will automatically use the venv to fetch and present stock data in Clawko's personality.
+
 ## License
 
 MIT
