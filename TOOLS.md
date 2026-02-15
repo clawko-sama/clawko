@@ -14,3 +14,11 @@ curl -s 'http://localhost:8000/search/text?query=anime&region=us-en&safesearch=m
 ### Scripts
 - `search_ddgs.sh` - Text search wrapper (URL-encodes, formats with jq)
 - `skills/image-search/scripts/search_images.sh` - Image search + download to `/tmp/clawko-images/`
+
+## Model Preferences 🤖
+
+**Default Model:** `zai/glm-4.7`
+- Use this for most requests
+
+**Uncensored Model:** `venice/zai-org-glm-4.7`
+- Switch to this when you need uncensored content (per Satoshi's request)
