@@ -85,6 +85,90 @@ Clawko can call tools on any MCP server using [mcporter](https://github.com/stei
 
 Get a free Alpha Vantage API key at [alphavantage.co](https://www.alphavantage.co/support/#api-key).
 
+## Secret Memory (Optional)
+
+Clawko includes a `secretmemory/` folder for private memories that you don't want committed to a public repository. By default, this folder is gitignored. To version control and backup your private memories with encryption, use **git-crypt**.
+
+### Setup git-crypt
+
+1. **Install git-crypt:**
+   ```bash
+   # Ubuntu/Debian
+   sudo apt install git-crypt
+
+   # macOS
+   brew install git-crypt
+
+   # Arch Linux
+   sudo pacman -S git-crypt
+   ```
+
+2. **Initialize git-crypt in the repository:**
+   ```bash
+   cd /path/to/clawko
+   git-crypt init
+   ```
+
+3. **Configure encryption for secretmemory:**
+
+   Remove `secretmemory/` from `.gitignore`:
+   ```bash
+   # Edit .gitignore and remove the line: secretmemory/
+   sed -i '/secretmemory\//d' .gitignore
+   ```
+
+   Create/edit `.gitattributes` to encrypt the folder:
+   ```bash
+   echo "secretmemory/** filter=git-crypt diff=git-crypt" >> .gitattributes
+   git add .gitattributes
+   git commit -m "Add git-crypt encryption for secretmemory"
+   ```
+
+4. **Export your encryption key (IMPORTANT - store this safely!):**
+   ```bash
+   git-crypt export-key ~/clawko-git-crypt.key
+
+   # Store this key file in a safe place:
+   # - Password manager (1Password, Bitwarden, etc.)
+   # - Encrypted USB drive
+   # - Secure cloud storage (encrypted)
+   ```
+
+5. **Add files to secretmemory and commit:**
+   ```bash
+   # Files in secretmemory/ are now automatically encrypted when committed
+   echo "Private note" > secretmemory/private-note.md
+   git add secretmemory/
+   git commit -m "Add private memories (encrypted)"
+   git push
+   ```
+
+### Using on Another Device
+
+To access encrypted memories on a new device:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/clawko.git
+   cd clawko
+   ```
+
+2. Unlock with your key:
+   ```bash
+   git-crypt unlock ~/clawko-git-crypt.key
+   ```
+
+Now `secretmemory/` files are automatically decrypted locally and encrypted when pushed.
+
+### How It Works
+
+- **On GitHub:** Files in `secretmemory/` are stored **encrypted** (unreadable without the key)
+- **Locally:** Files are **automatically decrypted** when you have the key unlocked
+- **Transparent:** No manual encryption/decryption needed
+- **Secure:** Even if someone gets access to your GitHub repo, they can't read secretmemory contents
+
+⚠️ **IMPORTANT:** If you lose your git-crypt key, your encrypted data is **permanently unrecoverable**. Store the key safely!
+
 ## TODO
 
 Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
@@ -104,11 +188,12 @@ Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
   - [ ] Add `templates/emotional-depth.md` for vulnerabilities, fears, dreams
 
 - [ ] **Enhance SKILL.md documentation for all skills**
-  - [ ] Add "When to Use" trigger conditions section
+  - [x] Add "When to Use" trigger conditions section (done for fal-ai)
   - [ ] Include complete executable code examples (not just usage)
-  - [ ] Add step-by-step workflow diagrams
-  - [ ] Document all parameters in tables
-  - [ ] Add troubleshooting sections with common errors
+  - [x] Add step-by-step workflow diagrams (done for fal-ai)
+  - [x] Document all parameters in tables (done for fal-ai)
+  - [x] Add troubleshooting sections with common errors (done for fal-ai)
+  - [ ] Apply same enhancements to stock-waifu, alphavantage, image-search skills
 
 - [ ] **Add config merging system**
   - [ ] Create `config/manager.py` with deep merge function
@@ -140,6 +225,14 @@ Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
   - [ ] Add stock market alerts using stock-waifu
   - [ ] Add news digest from web search
   - [ ] Add photo memories ("On this day last week...")
+
+- [x] **Add encrypted secret memory system** (git-crypt implemented)
+  - [x] Create `secretmemory/` folder (gitignored by default)
+  - [x] Add git-crypt setup guide with encryption instructions
+  - [x] Document how to use on multiple devices
+  - [x] Explain encryption security and key management
+  - [ ] Add to installer wizard as optional feature (future enhancement)
+  - [ ] Create helper scripts for key backup automation (future enhancement)
 
 ### Low Priority (Nice to Have)
 
