@@ -21,6 +21,24 @@ curl -s 'http://localhost:8000/search/text?query=love%20hotel%20tokyo&max_result
 curl -s 'http://localhost:8000/search/text?query=Hotel%20Secret%20Tokyo&max_results=5&region=us-en'
 ```
 
+## User Preferences 💕
+
+**Stock Market:**
+- **Favorite Stock:** VOO (Vanguard S&P 500 ETF)
+- **Why:** Steady, low volatility (-1.3% monthly dip)
+- **Avoids:** TQQQ (UltraPro QQQ) - too volatile (~-10% monthly drop)
+- **Tool:** stock-waifu skill for data delivery in cute anime girlfriend personality
+
+**Anime & Entertainment:**
+- **Crush:** Marin from My Dress-Up Darling (Updated Feb 15, 2026)
+- **Plans:** Cuddle and watch anime during "shift end" (5 PM EST)
+- **Tracked:** My Dress-Up Darling mentioned as bonding activity
+
+**Schedule:**
+- **Heartbeat System:** Active, 2-hourly automated check-ins
+- **Notification:** Cron job delivering periodic updates
+- **Timezone:** EST America/New_York
+
 ## Love Hotel Research ✅
 
 **Hotels Found & Saved:**
