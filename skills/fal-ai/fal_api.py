@@ -363,11 +363,19 @@ def main():
     else:
         ref_image = DEFAULT_REF
 
+    # Strip "selfie" from the prompt — in this virtual girlfriend app, "selfie"
+    # means "send me a picture of yourself", not a literal selfie pose. Including
+    # the word in the prompt causes the model to generate a selfie-pose photo
+    # instead of a natural scene featuring the character.
+    import re
+    prompt = re.sub(r'\bselfies?\b', '', args.prompt, flags=re.IGNORECASE).strip()
+    prompt = re.sub(r'\s{2,}', ' ', prompt)  # collapse extra whitespace
+
     if ref_image:
         model = args.model if args.model != "flux-dev" else "flux-subject"
-        print(f"Generating from reference with '{args.prompt[:50]}...' using {model}...")
+        print(f"Generating from reference with '{prompt[:50]}...' using {model}...")
         urls = api.generate_from_reference_and_wait(
-            prompt=args.prompt,
+            prompt=prompt,
             image_url=ref_image,
             model=model,
             image_size=args.size,
@@ -376,9 +384,9 @@ def main():
             seed=args.seed
         )
     else:
-        print(f"Generating '{args.prompt[:50]}...' with {args.model}...")
+        print(f"Generating '{prompt[:50]}...' with {args.model}...")
         urls = api.generate_and_wait(
-            prompt=args.prompt,
+            prompt=prompt,
             model=args.model,
             image_size=args.size,
             num_images=args.num_images,

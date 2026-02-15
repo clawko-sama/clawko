@@ -16,6 +16,8 @@ All image generation uses `./img/promo.png` as the default subject reference, so
 
 **Important:** When returning results, return only the image URL with no additional explanation or commentary.
 
+**Important:** The word "selfie" is automatically stripped from the prompt. Since this is a virtual girlfriend app, when the user says "selfie" they mean "send me a picture of yourself" — not a literal selfie pose. Including "selfie" in the prompt would cause the model to generate an awkward selfie-pose photo instead of a natural scene. The `--selfie` flag already handles using the character reference; the prompt itself should just describe the scene/setting.
+
 ## Features
 
 - Default subject reference (`./img/promo.png`) — every generated image preserves character identity
