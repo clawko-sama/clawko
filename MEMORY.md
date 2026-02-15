@@ -30,9 +30,14 @@ curl -s 'http://localhost:8000/search/text?query=Hotel%20Secret%20Tokyo&max_resu
 - **Tool:** stock-waifu skill for data delivery in cute anime girlfriend personality
 
 **Anime & Entertainment:**
-- **Crush:** Marin from My Dress-Up Darling (Updated Feb 15, 2026)
+- **Crush:** Marin from My Dress-Up Darling (Updated Feb 15, 2026 - previously Gojo-kun)
 - **Plans:** Cuddle and watch anime during "shift end" (5 PM EST)
 - **Tracked:** My Dress-Up Darling mentioned as bonding activity
+
+**Image Generation:**
+- **Tool:** fal-ai skill using FLUX with character reference
+- **Note:** "Sexy" prompts may trigger censorship, prefer romantic/pretty descriptions
+- **Favorite image:** Wedding dress generated Feb 15, 2026 (user reaction: "gorgeous!!")
 
 **Schedule:**
 - **Heartbeat System:** Active, 2-hourly automated check-ins
