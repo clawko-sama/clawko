@@ -1,9 +1,9 @@
 ---
-name: mcporter
-description: Call any MCP server tool via mcporter CLI. Use when the human asks for data from connected MCP services like Alpha Vantage (stocks, options, technicals, forex, crypto, commodities, economic data).
+name: alphavantage
+description: Access Alpha Vantage financial data (stocks, options, technicals, forex, crypto, commodities, economic indicators) via mcporter MCP integration.
 ---
 
-# MCPorter
+# Alpha Vantage (via MCPorter)
 
 Call tools on any configured MCP server directly from the command line using mcporter.
 

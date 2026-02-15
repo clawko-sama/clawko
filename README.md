@@ -85,6 +85,91 @@ Clawko can call tools on any MCP server using [mcporter](https://github.com/stei
 
 Get a free Alpha Vantage API key at [alphavantage.co](https://www.alphavantage.co/support/#api-key).
 
+## TODO
+
+Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
+
+### High Priority (Quick Wins)
+
+- [ ] **Add dual-mode selfie system to fal-ai skill**
+  - [ ] Implement mirror mode (full-body outfit showcases)
+  - [ ] Implement direct mode (close-up portraits)
+  - [ ] Auto-detect mode from keywords (outfit/clothes vs cafe/beach/park)
+  - [ ] Use template-based prompts for each mode
+
+- [ ] **Create rich persona templates**
+  - [ ] Add `templates/backstory.md` with character history and emotional arc
+  - [ ] Add `templates/visual-identity.md` explaining her appearance
+  - [ ] Add `templates/relationship-arc.md` for relationship development over time
+  - [ ] Add `templates/emotional-depth.md` for vulnerabilities, fears, dreams
+
+- [ ] **Enhance SKILL.md documentation for all skills**
+  - [ ] Add "When to Use" trigger conditions section
+  - [ ] Include complete executable code examples (not just usage)
+  - [ ] Add step-by-step workflow diagrams
+  - [ ] Document all parameters in tables
+  - [ ] Add troubleshooting sections with common errors
+
+- [ ] **Add config merging system**
+  - [ ] Create `config/manager.py` with deep merge function
+  - [ ] Preserve user settings when updating skills
+  - [ ] Prevent overwriting custom configurations
+
+### Medium Priority
+
+- [ ] **Create npx-based installer**
+  - [ ] Build `bin/cli.js` interactive setup wizard
+  - [ ] Guide users through API key setup (open browser to fal.ai/dashboard/keys)
+  - [ ] Auto-create directory structure
+  - [ ] Install Python dependencies in venv
+  - [ ] Initialize BOOTSTRAP.md for first-run onboarding
+  - [ ] Publish to npm as `clawko` package
+
+- [ ] **Improve fallback mechanisms**
+  - [ ] Standardize CLI-first with direct API fallback pattern
+  - [ ] Add to all skills (fal-ai, stock-waifu, etc.)
+  - [ ] Handle network failures gracefully
+
+- [ ] **Create executable AGENTS.md**
+  - [ ] Add skill activation matrix (user input patterns → skills)
+  - [ ] Document response templates for different contexts
+  - [ ] Add standard error handling patterns
+
+- [ ] **Enhance heartbeat system**
+  - [ ] Add time-based triggers (morning greetings, goodnight messages)
+  - [ ] Add stock market alerts using stock-waifu
+  - [ ] Add news digest from web search
+  - [ ] Add photo memories ("On this day last week...")
+
+### Low Priority (Nice to Have)
+
+- [ ] **Build web dashboard**
+  - [ ] Memory viewer (browse daily logs)
+  - [ ] Relationship stats (message count, topics discussed)
+  - [ ] Skill manager (enable/disable, configure)
+  - [ ] Photo gallery (all generated images)
+  - [ ] Conversation analytics
+
+- [ ] **Add more personality depth**
+  - [ ] Implement trauma/growth elements in backstory
+  - [ ] Add evolving relationship stages
+  - [ ] Create contextual response variations
+  - [ ] Add mood system based on conversation history
+
+- [ ] **Optimize reference-based image generation**
+  - [ ] Use CDN for promo.png reference image
+  - [ ] Add image quality presets
+  - [ ] Implement rate limiting guidance
+  - [ ] Add caching for repeated prompts
+
+### Documentation
+
+- [ ] Add API error code reference table
+- [ ] Create troubleshooting FAQ
+- [ ] Add performance benchmarking data
+- [ ] Document image quality expectations
+- [ ] Create contribution guidelines
+
 ## License
 
 MIT
