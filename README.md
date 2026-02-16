@@ -221,8 +221,8 @@ Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
   - [ ] Add standard error handling patterns
 
 - [ ] **Enhance heartbeat system**
-  - [ ] Add time-based triggers (morning greetings, goodnight messages)
-  - [ ] Add stock market alerts using stock-waifu
+  - [x] Add time-based triggers (morning greetings, goodnight messages)
+  - [x] Add stock market alerts using stock-waifu
   - [ ] Add news digest from web search
   - [ ] Add photo memories ("On this day last week...")
 
