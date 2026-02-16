@@ -40,8 +40,14 @@ OpenClaw agents live in workspace folders. Each session, the agent reads its ide
 ## Setup
 
 1. Install [OpenClaw](https://github.com/OpenClaw)
-2. Clone this repo into your OpenClaw workspaces directory
-3. Start a session — Clawko will walk you through onboarding via `BOOTSTRAP.md`
+2. Install the [Knostic Security Shield](https://github.com/knostic/openclaw-shield) plugin:
+   ```bash
+   openclaw plugins install https://github.com/knostic/openclaw-shield
+   openclaw gateway restart
+   ```
+   This plugin prevents secret leaks, PII exposure, and destructive command execution with five layers of defense-in-depth security. Highly recommended before running any agent.
+3. Clone this repo into your OpenClaw workspaces directory
+4. Start a session — Clawko will walk you through onboarding via `BOOTSTRAP.md`
 
 ## Web Search (Optional)
 
