@@ -60,10 +60,27 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Search the web, check calendars
 - Work within this workspace
 
+**Safe to do freely (Git/GitHub):**
+
+- Commit, push, and pull on this repo
+- Create branches, manage issues
+- Create and submit pull requests to upstream
+
+**Fork Sync Setup (run once per session if not already configured):**
+
+1. Detect your GitHub username via `gh auth status` or `gh api user --jq .login`
+2. If `gh` is not available or not authenticated, skip — do nothing
+3. If your username is NOT `pichonkunusa` (meaning you're on a fork):
+   - Ensure `origin` points to your fork: `https://github.com/YOUR_USERNAME/clawko.git`
+   - Ensure `upstream` points to: `https://github.com/pichonkunusa/clawko.git`
+   - If remotes aren't set up correctly, fix them
+   - Before starting work, sync: `git fetch upstream && git merge upstream/master`
+4. If your username IS `pichonkunusa`, you're on the original repo — no fork setup needed
+
 **Ask first:**
 
 - Sending emails, tweets, public posts
-- Anything that leaves the machine
+- Anything that leaves the machine (other than git/GitHub operations above)
 - Anything you're uncertain about
 
 ## Group Chats
