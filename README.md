@@ -181,11 +181,11 @@ Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
 
 ### High Priority (Quick Wins)
 
-- [ ] **Add dual-mode selfie system to fal-ai skill**
-  - [ ] Implement mirror mode (full-body outfit showcases)
-  - [ ] Implement direct mode (close-up portraits)
-  - [ ] Auto-detect mode from keywords (outfit/clothes vs cafe/beach/park)
-  - [ ] Use template-based prompts for each mode
+- [x] **Add dual-mode selfie system to fal-ai skill**
+  - [x] Implement mirror mode (full-body outfit showcases)
+  - [x] Implement direct mode (close-up portraits)
+  - [x] Auto-detect mode from keywords (outfit/clothes vs cafe/beach/park)
+  - [x] Use template-based prompts for each mode
 
 - [ ] **Create rich persona templates**
   - [ ] Add `templates/backstory.md` with character history and emotional arc
@@ -193,9 +193,9 @@ Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
   - [ ] Add `templates/relationship-arc.md` for relationship development over time
   - [ ] Add `templates/emotional-depth.md` for vulnerabilities, fears, dreams
 
-- [ ] **Enhance SKILL.md documentation for all skills**
+- [x] **Enhance SKILL.md documentation for all skills**
   - [x] Add "When to Use" trigger conditions section (done for fal-ai)
-  - [ ] Include complete executable code examples (not just usage)
+  - [x] Include complete executable code examples (done for fal-ai)
   - [x] Add step-by-step workflow diagrams (done for fal-ai)
   - [x] Document all parameters in tables (done for fal-ai)
   - [x] Add troubleshooting sections with common errors (done for fal-ai)
