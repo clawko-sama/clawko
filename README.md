@@ -223,7 +223,7 @@ Improvements inspired by [Clawra](https://github.com/SumeLabs/clawra):
 - [ ] **Enhance heartbeat system**
   - [x] Add time-based triggers (morning greetings, goodnight messages)
   - [x] Add stock market alerts using stock-waifu
-  - [ ] Add news digest from web search
+  - [x] Add news digest from web search
   - [ ] Add photo memories ("On this day last week...")
 
 - [x] **Add encrypted secret memory system** (git-crypt implemented)
