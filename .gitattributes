@@ -1,1 +1,2 @@
 secretmemory/** filter=git-crypt diff=git-crypt
+memory/** filter=git-crypt diff=git-crypt
