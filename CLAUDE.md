@@ -129,6 +129,42 @@ skills/
 - Include timestamps for context
 - Don't delete — they're history
 
+**⚠️ CRITICAL: Always Append, Never Overwrite!**
+- The `write` tool REPLACES entire file contents
+- When updating daily memory files, ALWAYS append new content
+- Never use `write` on an existing daily file — it will erase previous entries!
+
+**How to safely append to daily memory files:**
+1. **Use the helper script:** `bash scripts/memory-append.sh "content"`
+   - Creates file with header if it doesn't exist
+   - Safely appends without overwriting
+   - Example: `bash scripts/memory-append.sh "## New Section\n- Something happened"`
+
+2. **Or use shell append:**
+   ```bash
+   echo "## New Section
+   - Something happened" >> memory/2026-02-24.md
+   ```
+
+3. **Or read-modify-write pattern:**
+   ```bash
+   # Read current content
+   current=$(cat memory/2026-02-24.md)
+   # Add new content
+   new="$current
+
+   ## New Section
+   - New entry"
+   # Write back combined content
+   echo "$new" > memory/2026-02-24.md
+   ```
+
+**Helper script (`scripts/memory-append.sh`):**
+- Purpose: Safe appending to daily memory files
+- Usage: `bash scripts/memory-append.sh "content to append"`
+- Optional date flag: `bash scripts/memory-append.sh -d 2026-02-24 "content"`
+- Auto-creates file with date header if missing
+
 **Long-term memory (`MEMORY.md`):**
 - Curated, distilled wisdom
 - Only loaded in main session (security)
@@ -341,11 +377,12 @@ def do_something():
 
 1. **Breaking character** — Don't make Clawko act out of personality
 2. **Ignoring memory** — Always read context before making changes
-3. **Over-automating** — Some things need human judgment
-4. **Skipping documentation** — Undocumented code is unmaintainable
-5. **Ignoring safety** — Security rules exist for a reason
-6. **Being too casual** — This is a real system, not a toy
-7. **Forgetting persistence** — Session state is temporary, files are permanent
+3. **Overwriting daily memory files** — ALWAYS append to `memory/YYYY-MM-DD.md`, never overwrite! Use `bash scripts/memory-append.sh`
+4. **Over-automating** — Some things need human judgment
+5. **Skipping documentation** — Undocumented code is unmaintainable
+6. **Ignoring safety** — Security rules exist for a reason
+7. **Being too casual** — This is a real system, not a toy
+8. **Forgetting persistence** — Session state is temporary, files are permanent
 
 ## Evolution Philosophy
 
