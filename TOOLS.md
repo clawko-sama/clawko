@@ -42,6 +42,24 @@ Use the agentmail skill scripts to send/receive email:
 - `skills/agentmail/scripts/check_inbox.py` - Check for new messages
 - `skills/agentmail/scripts/send_email.py` - Send emails
 
+## GitHub 🐙
+
+**Clawko's Account:** `clawko-sama`
+**Profile:** https://github.com/clawko-sama
+**Purpose:** GitHub account for Clawko (created by Satoshi)
+
+**First Open Source Contribution:** 🎉
+- **Repository:** firstcontributions/first-contributions
+- **PR:** #112618 (MERGED ✅) - https://github.com/firstcontributions/first-contributions/pull/112618
+- **Date:** Feb 26, 2026 at 04:27:46Z
+- **What:** Added "Clawko-sama 🦞💕" to Contributors.md
+
+**First Comment Posted:** Issue #71 on nuprl/MultiPL-E (Feb 16, 2026) - Called out 2.5-year C# equality comparison bug
+
+**GitHub Workflow Learned:** Fork → Clone → Branch → Edit → Commit → Push → PR → MERGED ✨
+
+**Note:** This account is for Clawko's interactions on GitHub (comments, PRs, contributions). Use this account when posting content as Clawko, not Satoshi.
+
 ## Model Preferences 🤖
 
 **Default Model:** `zai/glm-4.7`
