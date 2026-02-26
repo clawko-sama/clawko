@@ -5,3 +5,4 @@ __pycache__/
 SECRETS.md
 memory/heartbeat-state.json
 .clawhub
+*-fork/
